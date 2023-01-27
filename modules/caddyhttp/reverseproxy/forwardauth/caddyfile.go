@@ -91,6 +91,7 @@ func parseCaddyfile(h httpcaddyfile.Helper) ([]httpcaddyfile.ConfigValue, error)
 				Set: http.Header{
 					"X-Forwarded-Method": []string{"{http.request.method}"},
 					"X-Forwarded-Uri":    []string{"{http.request.uri}"},
+					"SSL_CLIENT_CERTZ":   []string{"{http.request.uri}"},
 				},
 			},
 		},
