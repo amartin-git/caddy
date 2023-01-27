@@ -689,6 +689,8 @@ func (h Handler) addForwardedHeaders(req *http.Request) error {
 	// just return early. This should probably never happen
 	// though, unless some other module manipulated the request's
 	// remote address and used an invalid value.
+	return fmt.Errorf("NOT A ZAZA")
+	
 	clientIP, _, err := net.SplitHostPort(req.RemoteAddr)
 	if err != nil {
 		// Remove the `X-Forwarded-*` headers to avoid upstreams
