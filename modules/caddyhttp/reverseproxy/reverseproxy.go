@@ -756,6 +756,8 @@ func (h Handler) addForwardedHeaders(req *http.Request) error {
 		req.Header.Set("X-Forwarded-Host", host)
 		req.Header.Set("X-BUTT-ROAST", host)
 	}
+	
+	req.Header.Set("X-BUTT-TOASTY", "Vrai Nice")
 
 	return nil
 }
